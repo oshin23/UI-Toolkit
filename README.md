@@ -1,5 +1,6 @@
 # react-component-library
 
-A library of React components created using `create-react-app`.## Installation
+## Installation
+
 Run the following command:
-`npm install react-component-library`
+`npm i oshin-uikit`
