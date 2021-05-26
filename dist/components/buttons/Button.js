@@ -1,13 +1,30 @@
 import React from "react";
 import "./Button.css";
+import Spinner from "./Spinner";
 
 const Button = props => {
   const {
     children
   } = props;
+  const disabled = {
+    cursor: "not-allowed",
+    pointerEvents: "none",
+    color: "rgb(135 137 149)",
+    borderColor: "#E6E8F0",
+    background: "#e7e4e4"
+  };
+  const btn = {
+    cursor: "pointer"
+  };
+  const loading = {
+    padding: "0"
+  };
   return /*#__PURE__*/React.createElement("button", {
-    className: "buttonComponent"
-  }, children.toUpperCase());
+    className: props.variant === "primary" ? "btn btn-primary" : props.variant === "secondary" ? "btn btn-secondary" : props.variant === "default" ? "btn btn-default" : "btn",
+    style: props.disabled ? disabled : props.isLoading ? { ...loading,
+      ...disabled
+    } : btn
+  }, props.isLoading ? /*#__PURE__*/React.createElement(Spinner, null) : children);
 };
 
 export default Button;
