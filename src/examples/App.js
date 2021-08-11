@@ -1,33 +1,40 @@
 import React from "react";
-import { TextInput, Button } from "../lib/index.js";
+import ButtonComponent from "./Buttons";
+import InputComponent from "./TextInput";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const App = () => (
-  <div style={{ width: 640, margin: "15px auto" }}>
-    <h1>Hello React</h1>
+  <Router>
+    <div style={{ width: 640, margin: "15px auto" }}>
+      <h1>React Components</h1>
 
-    <h3>1. Input text with placeholder</h3>
-    <TextInput placeholder="Text input placeholder.." />
+      <nav>
+        <ul>
+          {/* <li>
+            <Link to="/">Home</Link>
+          </li> */}
+          <li>
+            <Link to="/button">Button</Link>
+          </li>
+          <li>
+            <Link to="/input">Input</Link>
+          </li>
+        </ul>
+      </nav>
 
-    <h3>2. Input text with label </h3>
-    <TextInput name="email" label="Email" placeholder="Enter your email" />
-
-    <h3>3. Invalid/Required Input field </h3>
-    <TextInput
-      label="Email"
-      placeholder="Enter your email"
-      helpText="This field is required"
-    />
-
-    <h3>4. Disabled Input field </h3>
-    <TextInput disabled />
-
-    <hr />
-    <Button variant="primary">Primary</Button>
-    <Button variant="secondary">Secondary</Button>
-    <Button variant="default">Default</Button>
-    <Button disabled>Disabled</Button>
-    <Button isLoading>Disabled loading</Button>
-  </div>
+      <Switch>
+        <Route path="/input">
+          <InputComponent />
+        </Route>
+        <Route path="/button">
+          <ButtonComponent />
+        </Route>
+        {/* <Route path="/">
+            <Home />
+          </Route> */}
+      </Switch>
+    </div>
+  </Router>
 );
 
 export default App;

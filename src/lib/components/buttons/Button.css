@@ -1,5 +1,5 @@
 .btn {
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 0.75em 1.45em;
   width: 30em;
   height: 2.625em;
@@ -19,12 +19,13 @@
   color: #0c0e11;
 }
 .btn-default {
-  color: #0c0e11;
+  color: #787884;
   background-color: #fff;
-  border: 1px solid #0c0e11;
+  border: 1px solid #ebeef0;
 }
 .btn:hover {
-  /* box-shadow: #272727b0 1px 1px 3px, #272727b0 -1px -1px 3px; */
+  background-color: #045ec8;
+  color: #ffffff;
 }
 .btn:active {
   opacity: 0.8;

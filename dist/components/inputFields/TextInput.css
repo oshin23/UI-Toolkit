@@ -1,24 +1,50 @@
-.simple-form-group {
-  margin-bottom: 1rem;
-}
-
-.simple-text-label {
+.text-label {
   display: block;
-  color: red;
+  color: #0c0e11;
+  font-size: 14px;
+  margin: 0.1em 0.1em 0.3em;
+  font-weight: 500;
 }
 
-.simple-text-input {
+.text-input {
   display: inline-block;
   margin-bottom: 0.5rem;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  color: rgb(33, 37, 41);
+  width: 26.9em;
+  height: 2.625em;
+  border-radius: 5px;
+  padding: 0 0.7em;
+  color: #0c0e11;
+  border: 1px solid #ebeef0;
+}
+.text-input:focus-visible {
+  outline: none;
+  border: 1px solid #0c0e11;
 }
 
-.simple-form-text {
-  color: #6c757d !important;
+.form-help-text {
+  color: #d14343;
   display: block;
   margin-top: 0.25rem;
   font-size: 80%;
   font-weight: 400;
+}
+
+.text-input-invalid {
+  border-color: #d14343;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #bbbbc3;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #bbbbc3;
+}
+
+::placeholder {
+  color: #bbbbc3;
 }
